@@ -1,8 +1,8 @@
 {
-  "name": "com.hevolus.packageupdater",
-  "version": "1.0.0",
-  "displayName": "Package Updater",
-  "description": "Update your custom packages",
+  "name": "com.hevolus.packagetools",
+  "version": "1.0.1",
+  "displayName": "Package Tools",
+  "description": "Tools to manage your custom packages",
   "unity": "2018.3",
   "unityRelease": "1f1"
 }
