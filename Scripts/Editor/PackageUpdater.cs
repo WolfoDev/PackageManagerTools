@@ -20,6 +20,7 @@ namespace PackageTools
 			File.WriteAllText(pathToManifest.FullName, manifestData);
 		}
 
+		//Can update only if the manifest is found
 		[MenuItem("File/Package Tools/Update Packages", true)]
 		static bool UpdatePackagesCheck(MenuCommand menuCommand)
 		{
