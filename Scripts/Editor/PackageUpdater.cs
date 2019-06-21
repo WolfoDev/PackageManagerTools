@@ -6,7 +6,7 @@ namespace PackageTools
 {
 	public class PackageUpdater : EditorWindow
 	{
-		[MenuItem("File/Update Packages")]
+		[MenuItem("File/Package Tools/Update Packages")]
 		static void UpdatePackages()
 		{
 			if (!EditorUtility.DisplayDialog("WARNING", $"You are about to update ALL packages.", "Okay", "Cancel"))
@@ -15,12 +15,12 @@ namespace PackageTools
 			DirectoryInfo pathToManifest = new DirectoryInfo($"{Application.dataPath}/../Packages/manifest.json");
 			string manifestData = File.ReadAllText(pathToManifest.FullName);
 			Debug.Log(manifestData.Contains("\"lock\""));
-			manifestData = manifestData.Replace("\"lock\"", "\"trash\"");//TODO understand why
+			manifestData = manifestData.Replace("\"lock\"", "\"trash\"");
 			Debug.Log(manifestData);
 			File.WriteAllText(pathToManifest.FullName, manifestData);
 		}
 
-		[MenuItem("File/Update Packages", true)]
+		[MenuItem("File/Package Tools/Update Packages", true)]
 		static bool UpdatePackagesCheck(MenuCommand menuCommand)
 		{
 			return File.Exists($"{Application.dataPath}/../Packages/manifest.json");
